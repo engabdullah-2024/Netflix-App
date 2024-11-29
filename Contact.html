@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    function toggleMenu() {
+        const menu = document.getElementById('side-menu');
+        menu.classList.toggle('hidden');
+    }
+</script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+ <!-- Header with Menu Icon -->
+ <div class="bg-black w-full px-20 py-4 flex justify-between items-center">
+    <img class="sm:w-[400px] w-[100px]" src="https://th.bing.com/th/id/R.2ea85d7448475a744c1485c2eac3d3d1?rik=LOSTtarBPEnY%2fw&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fnetflix-logo-0.png&ehk=PaZLUHaWmwAMEzdIDx7zGpBu053ZpXipTljxBidJnfU%3d&risl=&pid=ImgRaw&r=0">
+    
+    <!-- Menu Icon for Mobile -->
+    <i class="fa-solid fa-bars text-[#E50914] sm:hidden text-4xl cursor-pointer" onclick="toggleMenu()"></i>
+    
+    <ul class="sm:flex gap-10 text-[#E50914] text-5xl hidden">
+        <a href="index.html"><li class="hover:text-white">Home</li></a> 
+        <a href="About.html"><li class="hover:text-white">About</li></a> 
+        <a href="Contact.html"><li class="hover:text-white">Contact</li></a> 
+    </ul>
+    <i class="fa-solid fa-magnifying-glass text-[#E50914] sm:text-5xl w-[50px] ml-14"></i>
+</div>
+
+<!-- Side Navigation Menu -->
+<div id="side-menu" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+    <div class="flex justify-end p-4">
+        <i class="fa-solid fa-xmark text-4xl text-white cursor-pointer" onclick="toggleMenu()"></i>
+    </div>
+    <ul class="text-white text-3xl text-center">
+        <a href="index.html"><li class="py-6">Home</li></a>
+        <a href="About.html"><li class="py-6">About</li></a>
+        <a href="Contact.html"><li class="py-6">Contact</li></a>
+    </ul>
+</div>
+
+
+  <!-- Contact Section -->
+  <section class="py-16 px-6 bg-black">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Contact Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 hover:text-[#E50914]">
+          Contact Us
+        </h1>
+        <p class="text-lg md:text-xl mx-auto max-w-3xl">
+          If you have any questions or need assistance, feel free to get in touch. We are here to help you!
+        </p>
+      </div>
+
+      <!-- Contact Form & Info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Form Section -->
+        <div class="bg-[#141414] p-8 rounded-lg shadow-xl hover:scale-105 transition duration-300 ease-in-out">
+          <h2 class="text-2xl font-semibold mb-4">Send Us a Message</h2>
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label for="name" class="block text-lg font-medium">Full Name</label>
+              <input type="text" id="name" name="name" required class="w-full p-3 mt-2 rounded-lg bg-gray-800 text-white placeholder-gray-400">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-lg font-medium">Email</label>
+              <input type="email" id="email" name="email" required class="w-full p-3 mt-2 rounded-lg bg-gray-800 text-white placeholder-gray-400">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-lg font-medium">Message</label>
+              <textarea id="message" name="message" rows="4" required class="w-full p-3 mt-2 rounded-lg bg-gray-800 text-white placeholder-gray-400"></textarea>
+            </div>
+            <button type="submit" class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="bg-[#141414] p-8 rounded-lg shadow-xl hover:scale-105 transition duration-300 ease-in-out">
+          <h2 class="text-2xl font-semibold mb-4">Get in Touch</h2>
+          <p class="text-lg mb-4">
+            Have a question? You can reach us through the following ways or use the contact form on the left:
+          </p>
+          <div class="mb-6">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-phone-alt text-red-600 mr-4 text-xl"></i>
+              <p class="text-lg">+1 800 123 4567</p>
+            </div>
+            <div class="flex items-center mb-4">
+              <i class="fas fa-envelope text-red-600 mr-4 text-xl"></i>
+              <p class="text-lg">support@netflix.com</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-lg mb-4">Follow us on social media:</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-red-600 text-2xl hover:text-red-700 transition duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-red-600 text-2xl hover:text-red-700 transition duration-300">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-red-600 text-2xl hover:text-red-700 transition duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-red-600 text-2xl hover:text-red-700 transition duration-300">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-black text-white py-10 mt-5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h2 class="text-lg font-semibold mb-4">About</h2>
+          <ul>
+            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+            <li><a href="#" class="hover:underline">Press</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Services</h2>
+          <ul>
+            <li><a href="#" class="hover:underline">Terms of Service</a></li>
+            <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+            <li><a href="#" class="hover:underline">Cookie Preferences</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Follow Us</h2>
+          <ul>
+            <li><a href="#" class="hover:underline">Facebook</a></li>
+            <li><a href="#" class="hover:underline">Twitter</a></li>
+            <li><a href="#" class="hover:underline">Instagram</a></li>
+            <li><a href="#" class="hover:underline">YouTube</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Newsletter</h2>
+          <p>Stay updated with the latest news, offers, and more!</p>
+          <div class="mt-4">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 w-full text-black rounded-md mb-4" />
+            <button class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+        <p class="text-sm">© 2024 Netflix, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

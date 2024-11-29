@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('side-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Header with Menu Icon -->
+    <div class="bg-black w-full px-20 py-4 flex justify-between items-center">
+        <img class="sm:w-[400px] w-[100px]" src="https://th.bing.com/th/id/R.2ea85d7448475a744c1485c2eac3d3d1?rik=LOSTtarBPEnY%2fw&riu=http%3a%2f%2fwww.freepnglogos.com%2fuploads%2fnetflix-logo-0.png&ehk=PaZLUHaWmwAMEzdIDx7zGpBu053ZpXipTljxBidJnfU%3d&risl=&pid=ImgRaw&r=0">
+        
+        <!-- Menu Icon for Mobile -->
+        <i class="fa-solid fa-bars text-[#E50914] sm:hidden text-4xl cursor-pointer " onclick="toggleMenu()"></i>
+        
+        <ul class="sm:flex gap-10 text-[#E50914] text-5xl hidden">
+            <a href="index.html"><li class="hover:text-white">Home</li></a> 
+            <a href="About.html"><li class="hover:text-white">About</li></a> 
+            <a href="Contact.html"><li class="hover:text-white">Contact</li></a> 
+        </ul>
+        <i class="fa-solid fa-magnifying-glass text-[#E50914] sm:text-5xl w-[50px] ml-14"></i>
+    </div>
+
+    <!-- Side Navigation Menu -->
+    <div id="side-menu" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden">
+        <div class="flex justify-end p-4">
+            <i class="fa-solid fa-xmark text-4xl text-white cursor-pointer" onclick="toggleMenu()"></i>
+        </div>
+        <ul class="text-white text-3xl text-center">
+            <a href="index.html"><li class="py-6">Home</li></a>
+            <a href="About.html"><li class="py-6">About</li></a>
+            <a href="Contact.html"><li class="py-6">Contact</li></a>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="flex flex-col items-center justify-center text-center mt-10 px-6 py-2">
+        <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold mt-5 hover:text-[#E50914]">
+            Watch Best and Quality Movies On 4K
+        </h1>
+        <p class="text-xl md:text-2xl lg:text-3xl font-serif mt-8 max-w-4xl mx-auto">
+            With Netflix, you can watch a wide variety of movies, TV shows, and original content anytime, anywhere. Whether you're in the mood for a thrilling drama, a hilarious comedy, or a binge-worthy series, Netflix offers something for everyone. Enjoy streaming your favorite titles with unlimited access, all at the click of a button!
+        </p>
+        <button class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg mt-6 hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none">
+            Watch Now
+        </button>
+        <div class="flex items-center justify-center mt-8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzvlkM0XcMzdsGdTLTl6YPEXEBljdzzG1FjA&s" 
+                alt="Watch Now" 
+                class="h-[300px] md:h-[400px] lg:h-[500px] w-[300px] md:w-[400px] lg:w-[500px] shadow-lg hover:scale-105 transition duration-300 ease-in-out">
+        </div>
+    </div>
+
+    <!-- Netflix Footer Section -->
+    <footer class="bg-black text-white py-10 mt-5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- About Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">About</h2>
+                    <ul>
+                        <li><a href="#" class="hover:underline">About Us</a></li>
+                        <li><a href="#" class="hover:underline">Contact</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                        <li><a href="#" class="hover:underline">Press</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Services</h2>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Follow Us</h2>
+                    <ul>
+                        <li><a href="#" class="hover:underline">Facebook</a></li>
+                        <li><a href="#" class="hover:underline">Twitter</a></li>
+                        <li><a href="#" class="hover:underline">Instagram</a></li>
+                        <li><a href="#" class="hover:underline">YouTube</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Newsletter</h2>
+                    <p>Stay updated with the latest news, offers, and more!</p>
+                    <div class="mt-4">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 w-full text-black rounded-md mb-4" />
+                        <button class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition duration-300 ease-in-out">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+                <p class="text-sm">© 2024 Netflix, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
